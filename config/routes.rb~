@@ -1,6 +1,6 @@
 Workorders::Application.routes.draw do
   #get "orders/index"
-  scope "(:locale)", :locale => /en|de/ do
+  scope "/:locale" do
     resources :orders
   end
 

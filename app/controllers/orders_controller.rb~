@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    @orders = Order.paginate(:page => params[:page])
+    logger.debug "Orders controller"
+    @orders = Order.paginate :page => params[:page]
   end
 end
