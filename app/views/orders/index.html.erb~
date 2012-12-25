@@ -1,5 +1,4 @@
-<h1>Orders#index</h1>
-<%= I18n.locale %>
+<h1><%= t :title %> </h1>
 <%= will_paginate %>
 <table>
  <%= render @orders %>

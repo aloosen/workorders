@@ -2,6 +2,7 @@ Workorders::Application.routes.draw do
   #get "orders/index"
   scope "(:locale)", :locale => /en|de/ do
     resources :orders
+#    match '/new', :to => 'orders#new'
   end
 
   # The priority is based upon order of creation:

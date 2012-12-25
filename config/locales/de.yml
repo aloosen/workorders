@@ -1,4 +1,16 @@
 de:
+  orders:
+    index:
+      title: Arbeitsauftraege
+    new:
+      title: Neuen Arbeitsauftrag anlegen
+      date: Datum
+      oursymbol: Unser Zeichen
+      theirsymbol: Ihr Zeichen
+      orderer: Auftraggeber
+      create: anlegen
+  
+      
   will_paginate:
     previous_label: "&#8592; Zur&uuml;ck"
     next_label: "Vor &#8594;"

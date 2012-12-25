@@ -1,0 +1,14 @@
+<h1><%= t '.title' %></h1>
+<%= form_for(@order) do |f| %>
+   <%= f.label :customer_id, t('.customer') %>
+   <%= f.select :customer_id, @customers.collect { |c| [ c.matchcode, c.id] } %>
+   <%= f.label :date, t('.date') %>
+   <%= f.date_select :date %>
+   <%= f.label :oursymbol, t('.oursymbol') %>
+   <%= f.text_field :oursymbol %>
+   <%= f.label :theirsymbol, t('.theirsymbol') %>
+   <%= f.text_field :theirsymbol %>
+   <%= f.label :orderer, t('.orderer') %>
+   <%= f.text_field :orderer %>   
+   <%= f.submit t('.create'), :class => 'btn btn-large btn-primary' %>
+<% end %>

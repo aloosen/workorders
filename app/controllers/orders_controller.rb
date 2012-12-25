@@ -1,5 +1,31 @@
 class OrdersController < ApplicationController
+
   def index
     @orders = Order.paginate :page => params[:page]
   end
+
+  def new
+    @order = Order.new
+    @customers = Customer.all
+  end
+  
+  def show
+    @order = Order.find( params[:id] )
+  end
+  
+  def create
+    @order = Order.new( params[:order] )
+    if @order.save
+      #
+    else
+      render 'new'
+    end
+  end
+  
+#  def show
+#    respond_to do |format|
+#      format.html
+#      format.js
+#    end
+#  end
 end
