@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
     @customers = Customer.all
+    @orderitems = []
   end
   
   def show
@@ -14,7 +15,7 @@ class OrdersController < ApplicationController
   end
   
   def create
-    @order = Order.new( params[:user] )
+    @order = Order.new( params[:order] )
     if @order.save
       #
     else

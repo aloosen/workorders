@@ -7,6 +7,10 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
     @customers = Customer.all
+    @orderitems = []
+  end
+
+  def additem
   end
   
   def show

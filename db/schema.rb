@@ -10,12 +10,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121225065206) do
+ActiveRecord::Schema.define(:version => 20121225210844) do
 
   create_table "customers", :force => true do |t|
     t.string   "matchcode"
     t.string   "string"
     t.text     "address"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "order_items", :force => true do |t|
+    t.integer  "order_id"
+    t.integer  "pos"
+    t.integer  "article_id"
+    t.decimal  "quantity"
+    t.text     "comments"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.decimal  "pause"
+    t.string   "type"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -33,6 +47,20 @@ ActiveRecord::Schema.define(:version => 20121225065206) do
     t.string   "invoiceno"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "positions", :force => true do |t|
+    t.integer  "order_id"
+    t.integer  "pos"
+    t.integer  "article_id"
+    t.decimal  "quantity"
+    t.text     "comments"
+    t.datetime "starttime"
+    t.datetime "endtime"
+    t.decimal  "pause"
+    t.string   "type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
