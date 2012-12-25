@@ -1,4 +1,4 @@
 <tr>
 <td> <%= order.id %></td>
-<td> <%= l order.date %></td>
+<td> <%= order.date %></td>
 </tr>
